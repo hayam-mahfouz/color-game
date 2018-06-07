@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.g-ground {
+    width: 50vw;
+    height: 30vh;
+    background-color: rgb(49, 4, 4);
+    position: absolute;
+    top: 70vh;
+    border-radius: 0px 100% 0px 0px;
+    z-index:9;
+}
+.b-ground{
+    width: 60vw;
+    height: 30vh;
+    background-color: rgb(97, 17, 17);
+    border-top: 50px solid green;
+    border-left: 50px solid green;
+    /* border-right: 50px solid green; */
+    position: absolute;
+    top: 70vh;
+    right: 0;
+    border-radius: 100% 0px 0px 0px;
+    z-index: 10;
+    
+}
+/* .b-ground2 {
+    position: absolute;
+    right: 20px;
+    top: 20px;   
+} */
+.main-body{
+    /* background-image:linear-gradient(180deg,rgb(69, 249, 255),rgb(213, 249, 255),rgb(213, 249, 255)); */
+    height: 100vh;
+    width: 100vw;
+    /* animation: sky infinite alternate linear 5s; */
+}
+.main-body::before{
+    content: "";
+    background-image:linear-gradient(180deg,rgb(69, 249, 255),rgb(213, 249, 255),rgb(213, 249, 255));
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    animation: sky infinite alternate linear 10s; 
+    z-index: 5;
+    /* animation-delay: 10s;    */
+}
+.main-body::after{
+    content: "";    
+    background-image:linear-gradient(180deg,rgba(6, 0, 41,1),rgba(27, 34, 122,1),rgba(27, 34, 122,1));
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    animation: sky infinite alternate linear 10s;  
+    animation-delay: 10s;  
+    z-index: 4; 
+}
+.main-body .sun-moon {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(243, 221, 20);
+    border-radius: 50%;
+    z-index: 9;
+    position: absolute;
+    left: 50vw;
+    bottom: 0;
+    box-shadow: 0px 0px 15px 6px #fff ;
+    animation: sunandmoon linear infinite 10s;
+}
+
+/* =================== keyframes ==================== */
+
+@keyframes sky{
+    from{
+        opacity: 1;
+    }
+    to{
+       opacity:0; 
+    }
+}
+
+/* @keyframes sunandmoon {
+    0%{
+        background-color: rgb(243, 221, 20);  
+        transform: translate(0,0px);
+    }
+    15%{
+        background-color: rgb(243, 221, 20);  
+        background-color: rgb(255, 115, 0);
+        transform: translate(0,-400px);
+    }
+    30%{
+        background-color: #FFF;
+      background-color: rgb(255, 115, 0);
+      transform: translate(0,0px);
+    }
+    31%{
+        transform: translate(0,0px);        
+        background-color:#FFF;
+    }
+    50%{
+        transform: translate(0,-400px);
+        background-color: #fff;         
+    }
+    80%{
+        transform: translate(0,0px);        
+        background-color:#fff;
+        background-color:rgb(243, 221, 20);
+        
+    }
+    100%{
+        background-color:rgb(243, 221, 20);
+        transform: translate(0,0px);
+    }
+} */
+@keyframes sunandmoon {
+    0%{
+        background-color: rgb(243, 221, 20);  
+        transform: translate(0,0px);
+    }
+    25%{
+        background-color: rgb(243, 221, 20);  
+        transform: translate(0,-400px);
+    }
+    50%{
+        background-color: rgb(255, 115, 0);
+        transform: translate(0,0px);
+    }
+    75%{
+        transform: translate(0,-400px);
+        background-color: #fff;  
+    }
+    100%{
+        background-color: rgb(243, 221, 20);  
+        transform: translate(0,0px);
+    }
+}
